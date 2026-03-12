@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// NUMBER HASHING
+// CHARACTER HASHING
 
 int main(){
     string s ;
