@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n ;
+    cin>>n;
+    vector<int> a(n);
+    for(int i = 0 ; i<n ; i++){
+        cin>>a[i];
+    }
+    int k;
+    cin>>k;
+    map<long long ,int>preSumMap;
+    long long sum = 0;
+    int maxlen = 0;
+    for(int i = 0 ; i<a.size() ; i++){
+        sum += a[i];
+        if(sum == k){
+            maxlen = max(maxlen , i+1);
+        }
+        int rem = sum - k;
+        if(preSumMap.find(rem) != preSumMap.end()){
+            int len = i - preSumMap[rem];
+            maxlen = max(maxlen , len);
+        }
+        preSumMap[sum] = i;
+    }
+    cout<<maxlen;
+
+}
