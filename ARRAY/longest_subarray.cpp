@@ -17,7 +17,7 @@ int main(){
         if(sum == k){
             maxlen = max(maxlen , i+1);
         }
-        int rem = sum - k;
+        long long rem = sum - k;
         if(preSumMap.find(rem) != preSumMap.end()){
             int len = i - preSumMap[rem];
             maxlen = max(maxlen , len);
