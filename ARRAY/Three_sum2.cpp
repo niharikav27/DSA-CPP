@@ -11,17 +11,17 @@ int main() {
 
     vector<vector<int>> ans;
 
-    sort(nums.begin(), nums.end());
+    sort(arr.begin(), arr.end());
 
     for(int i = 0; i < n; i++) {
 
-        if(i > 0 && nums[i] == nums[i - 1]) continue;
+        if(i > 0 && arr[i] == arr[i - 1]) continue;
 
         int j = i + 1;
         int k = n - 1;
 
         while(j < k) {
-            int sum = nums[i] + nums[j] + nums[k];
+            int sum = arr[i] + arr[j] + arr[k];
 
             if(sum < 0) {
                 j++;
@@ -30,13 +30,13 @@ int main() {
                 k--;
             }
             else {
-                ans.push_back({nums[i], nums[j], nums[k]});
+                ans.push_back({arr[i], arr[j], arr[k]});
                 j++;
                 k--;
 
-                while(j < k && nums[j] == nums[j - 1]) j++;
+                while(j < k && arr[j] == arr[j - 1]) j++;
 
-                while(j < k && nums[k] == nums[k + 1]) k--;
+                while(j < k && arr[k] == arr[k + 1]) k--;
             }
         }
     }
