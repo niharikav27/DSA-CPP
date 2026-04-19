@@ -14,7 +14,7 @@ int main(){
     int left = n-1;
     int right = 0;
 
-    while(left>=0 && right<m){
+    while(left >= 0 && right < m){
         if(arr1[left] > arr2[right]){
             swap(arr1[left] , arr2[right]);
             left-- , right++;
