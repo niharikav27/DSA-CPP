@@ -19,7 +19,7 @@ int minEatingSpeed(vector<int>& piles, int h) {
 }
 
 int main() {
-    int n;
+    int n ;
     cin >> n;
 
     vector<int> arr(n);
