@@ -3,7 +3,7 @@ using namespace std;
 bool canWePlace(int n,vector<int>&arr,int dist ,int cows){
     int cntcows = 1;
     int last = arr[0];
-    for(int i = 0 ; i<n ; i++){
+    for(int i = 1 ; i<n ; i++){
         if(arr[i] - last >= dist){
             cntcows++;
             last = arr[i];
